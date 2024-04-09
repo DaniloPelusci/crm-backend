@@ -1,4 +1,4 @@
-package br.com.danilopelusci;
+package br.com.danilopelusci.model;
 
 
 
