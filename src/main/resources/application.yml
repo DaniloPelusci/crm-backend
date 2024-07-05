@@ -1,0 +1,4 @@
+spring-doc:
+  pathToMatch: /api/**/v1/**
+  swegger-ui:
+    use-root-path: true
