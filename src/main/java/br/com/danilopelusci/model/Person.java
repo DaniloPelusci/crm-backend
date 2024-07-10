@@ -3,6 +3,15 @@ package br.com.danilopelusci.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "person")
 public class Person implements Serializable {
 
 	/**
@@ -10,10 +19,16 @@ public class Person implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(name = "firstName", nullable = false, length = 80)
 	private String firstName;
+	@Column(name = "lastName", nullable = false, length = 80)
 	private String lastName;
+	@Column(name = "address")
 	private String address;
+	@Column(name = "gender")
 	private String gender;
 	public Person(Long id, String firstName, String lastName, String address, String gender) {
 		this.id = id;
