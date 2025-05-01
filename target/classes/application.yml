@@ -1,7 +1,7 @@
 spring:
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/zero?useTimezone=true&servertimezone=UTC
+      url: jdbc:mysql://localhost:3306/crm_teste2?useTimezone=true&servertimezone=UTC
       username: root
       password: root
   jpa: 
