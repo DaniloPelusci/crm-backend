@@ -34,4 +34,9 @@ public class DocumentoLeadService {
 
         return documentoRepository.save(documento);
     }
+    
+    public DocumentoLead buscarPorId(Long id) {
+        return documentoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Documento não encontrado"));
+    }
 }

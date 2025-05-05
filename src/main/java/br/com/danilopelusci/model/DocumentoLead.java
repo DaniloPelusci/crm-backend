@@ -2,6 +2,7 @@ package br.com.danilopelusci.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class DocumentoLead {
     private LocalDateTime dataUpload;
 
     @Lob
+    @Column(name = "conteudo", columnDefinition = "LONGBLOB")
     private byte[] conteudo;
 
     @ManyToOne
