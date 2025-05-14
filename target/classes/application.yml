@@ -11,8 +11,14 @@ spring:
         hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
       show-sql: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
       
 spring-doc:
   pathToMatch: /api/**/v1/**
   swegger-ui:
     use-root-path: true
+
+  
